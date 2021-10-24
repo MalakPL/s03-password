@@ -14,14 +14,16 @@ auto main(int argc, const char* argv[]) -> int
 	{
 		if (argc != 2)
 		{
-			throw logic_error{ "Nie podano argumentu" };
+			throw logic_error{ "Podana ilosc argumentow jest nieprawidlowa, jezeli haslo zawiera spacje, podaj to haslo miedzy cudzoslowia." };
 		}
 
-		string Password{};
+		string Password { };
 		do
 		{
+			cout << "password: ";
 			cin >> Password;
-		} while(Password != argv[1]);
+		} 
+		while(Password != argv[1]);
 
 		cout << "ok!" << endl;
 
